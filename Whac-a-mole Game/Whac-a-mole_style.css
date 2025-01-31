@@ -1,0 +1,48 @@
+body {
+
+    display: flex;
+    font-family:'Times New Roman', Times, serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    width: 900px;
+}
+
+p {
+   font-weight: bold;
+   margin-top: 5px;
+}
+
+.game-timer {
+
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 18px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+/* add game board width : 900px*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.hole {
+    width: 200px;
+    height: 200px;
+    border: 2px brown solid;
+    border-radius:50% ;
+    cursor: pointer;
+}
+.image1 {
+    background-size: 150px;
+    background-image: url("C:\Users\ashka\Documents\META_Front-end\Antra Assignments\mole.jpeg");
+}
+
+
