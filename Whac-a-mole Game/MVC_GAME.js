@@ -1,25 +1,7 @@
-const View = (() => {
-    const domSelector = {
-        hole : document.querySelector ("#hole1"),
-        
-
-    }
-})
-
-const Model = ((view, api) => {
-    
-
-
-})
-
-const controller = ((view,model) => {
-
-    const { domSelector } = view
-
-    document.addEventListener(
+document.addEventListener(
     "DOMContentLoaded", function () {
     const holes = 
-        document.querySelectorAll(".hole1");
+        document.querySelectorAll(".hole");
     const startButton = 
         document.getElementById("startButton");
     const scoreDisplay = 
@@ -37,14 +19,14 @@ const controller = ((view,model) => {
 
     function comeout() {
         holes.forEach(hole => {
-            hole.classList.remove('mole');
+            hole.classList.remove('img');
             hole.removeEventListener(
                 'click', handleMoleClick);
         });
 
         let random = holes[Math.floor(Math.random() * 12)];
 
-        random.classList.add('mole');
+        random.classList.add('img');
         random.addEventListener('click', handleMoleClick);
     }
 
@@ -53,7 +35,7 @@ const controller = ((view,model) => {
             score++;
             scoreDisplay.textContent = `Score: ${score}`;
         }
-        this.classList.remove('mole');
+        this.classList.remove('img');
     }
 
     function startGame() {
@@ -67,11 +49,9 @@ const controller = ((view,model) => {
         gameOver = false;
         score = 0;
         scoreDisplay.textContent = `Score: ${score}`;
-        timer = 60;
+        timer = 30;
         timerDisplay.textContent = `Time: ${timer}s`;
 
-        startButton.disabled = true;
-        endButton.disabled = false;
 
         countdown = setInterval(() => {
             timer--;
@@ -81,8 +61,6 @@ const controller = ((view,model) => {
                 clearInterval(countdown);
                 gameOver = true;
                 alert(`Game Over!\nYour final score: ${score}`);
-                startButton.disabled = false;
-                endButton.disabled = true;
             }
         }, 1000);
 
@@ -99,15 +77,10 @@ const controller = ((view,model) => {
         gameOver = true;
         alert(`Game Ended!\nYour final score: ${score}`);
         score = 0;
-        timer = 60;
+        timer = 30;
         scoreDisplay.textContent = `Score: ${score}`;
         timerDisplay.textContent = `Time: ${timer}s`;
-        startButton.disabled = false;
-        endButton.disabled = true;
     }
 
     startButton.addEventListener("click", startGame);
 });
-
-
-})
