@@ -42,7 +42,7 @@ const controller = ((view,model) => {
                 'click', handleMoleClick);
         });
 
-        let random = holes[Math.floor(Math.random() * 9)];
+        let random = holes[Math.floor(Math.random() * 12)];
 
         random.classList.add('mole');
         random.addEventListener('click', handleMoleClick);
