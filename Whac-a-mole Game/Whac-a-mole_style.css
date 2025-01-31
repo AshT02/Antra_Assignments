@@ -1,22 +1,11 @@
 body {
-
     display: flex;
-    font-family:'Times New Roman', Times, serif;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0 auto;
-    width: 900px;
 }
 
-p {
-   font-weight: bold;
-   margin-top: 5px;
-}
-
-.game-timer {
-
+.game-info {
     position: absolute;
     top: 10px; 
     right: 10px; 
@@ -25,12 +14,18 @@ p {
     text-align: center;
 }
 
-/* add game board width : 900px*/
+#startButton {
+    margin-top: 10px;
+}
 
-.grid-container {
+.game-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
+}
+
+img {
+    background-size: 200px;
 }
 
 .hole {
@@ -40,9 +35,20 @@ p {
     border-radius:50% ;
     cursor: pointer;
 }
-.image1 {
-    background-size: 150px;
-    background-image: url("C:\Users\ashka\Documents\META_Front-end\Antra Assignments\mole.jpeg");
+
+
+@media only screen and (max-width: 600px) {
+    .game-container {
+        width: 80%;
+        gap: 10px;
+        padding: 5%;
+        grid-template-columns: repeat(3, 38%);
+    }
+
+    .hole {
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+    }
+
 }
-
-
