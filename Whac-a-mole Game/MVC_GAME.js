@@ -22,8 +22,6 @@ const controller = ((view,model) => {
         document.querySelectorAll(".hole1");
     const startButton = 
         document.getElementById("startButton");
-    const endButton = 
-        document.getElementById("endButton");
     const scoreDisplay = 
         document.getElementById("score");
     const timerDisplay = 
@@ -109,7 +107,6 @@ const controller = ((view,model) => {
     }
 
     startButton.addEventListener("click", startGame);
-    endButton.addEventListener("click", endGame);
 });
 
 
