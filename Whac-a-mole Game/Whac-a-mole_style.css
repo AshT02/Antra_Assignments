@@ -24,8 +24,9 @@ body {
     justify-content: center;
 }
 
-img {
+.img {
     background-size: 200px;
+    background-image: url("mole.jpeg");
 }
 
 .hole {
