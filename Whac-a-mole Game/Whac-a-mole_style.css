@@ -13,7 +13,9 @@ body {
     font-weight: bold;
     text-align: center;
 }
-
+#score {
+    font-weight: bold;
+}
 #startButton {
     margin-top: 10px;
 }
